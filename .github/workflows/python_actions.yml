@@ -18,6 +18,13 @@ jobs:
     services:
       postgres:
         image: postgres:9.6
+        env:
+          POSTGRES_DB: test
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_USER: postgres
+          POSTGRES_HOST: localhost
+          POSTGRES_PORT: 5432
+
         ports:
           - 5432:5432
         # Set health checks to wait until postgres has started
